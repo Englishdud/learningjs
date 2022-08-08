@@ -80,15 +80,69 @@
 
 
 
-for (let i=0; i<5; i++){
-    randomnum=9
-    console.log('What is you guess 1-10, you have currently have', 5-i , 'guesses remaining')
-    guess=parseInt(prompt('So what is your guess? '))
-    if (guess == randomnum && guess <= 10){
-        console.log('You got it right! ')
-        break
+// for (let i=0; i<5; i++){
+//     randomnum=9
+//     console.log('What is you guess 1-10, you have currently have', 5-i , 'guesses remaining')
+//     guess=parseInt(prompt('So what is your guess? '))
+//     if (guess == randomnum && guess <= 10){
+//         console.log('You got it right! ')
+//         break
+//     }
+//     else{
+//         console.log('Wrong Answer or Incorrect Response')
+//     }
+// }
+
+// for (i=1; i<=5; i++) {
+//     document.getElementById('cool').innerHTML += "<p>The square of "+i+" is "+i*i+ "</p>"
+// }
+// array=['num1', 'num2', 'num3', 'num4', 'num5', 'num6']
+
+// for (let i=0; i<array.length; i++) {
+//     console.log(array[i])
+// }
+
+
+
+// function replacer(indexs, replacedby, arrays){
+//     arrays[indexs] = replacedby
+//     return arrays
+// }
+
+// x=replacer(2, 'hello world', ['hi', 'hello', 'bye', 'goodbye'])
+// console.log(x)
+
+// function getFirstItem(arrays){
+//     indexs=arrays.length - 1
+//     X=arrays[indexs]
+//     return X
+// }
+// y=getFirstItem(['hello', 'hi', 'bye', 'goodbye'])
+// console.log(y)
+
+// function divisblenums(arrays, number){
+//     divisblearray=[]
+//     notdivisble=[]
+//     for (let i=0; i<arrays.length; i++) {
+//         if (arrays[i] % number == 0){
+//             divisblearray.push(arrays[i])
+//         }
+//         else {
+//             notdivisble.push(arrays[i])
+//         }
+//     }
+    
+//     return [divisblearray, notdivisble]
+// }
+// console.log(divisblenums([1, 2, 3, 4, 5, 8, 9, 10, 6, 15, 18, 20], 5))
+
+function addNumbersFromArray(arrays){
+    sum=0
+    for (let i=0; i<arrays.length; i++) {
+        sum+=arrays[i]
     }
-    else{
-        console.log('Wrong Answer or Incorrect Response')
-    }
+    return sum
 }
+
+x=addNumbersFromArray([1, 2, 3])
+console.log(x)

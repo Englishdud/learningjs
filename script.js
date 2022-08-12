@@ -66,7 +66,7 @@ function addition(){
     num1=parseInt(num1)
     num2=parseInt(num2)
     answer=num1+num2
-    alert(answer)
+    document.getElementById('ans').innerHTML=answer
 }
 function subtraction(){
     num1=document.getElementById("num1").value
@@ -74,7 +74,7 @@ function subtraction(){
     num1=parseInt(num1)
     num2=parseInt(num2)
     answer=num1-num2
-    alert(answer)
+    document.getElementById('ans').innerHTML=answer
 }
 function division(){
     num1=document.getElementById("num1").value
@@ -82,7 +82,7 @@ function division(){
     num1=parseInt(num1)
     num2=parseInt(num2)
     answer=num1/num2
-    alert(answer)
+    document.getElementById('ans').innerHTML=answer
 }
 function multiplication(){
     num1=document.getElementById("num1").value
@@ -90,5 +90,5 @@ function multiplication(){
     num1=parseInt(num1)
     num2=parseInt(num2)
     answer=num1*num2
-    alert(answer)
+    document.getElementById('ans').innerHTML=answer
 }

@@ -4,17 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+        *, *:before, *:after {
+            box-sizing: border-box;
+            font-family: Helvetica, sans-serif ;
+            font-weight: 500;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+            background: linear-gradient(to right, #f6d365, #fda085);
+        }
+        .calcgrid {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            min-height: 100vh;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: minmax(120px, auto)repeat(5, 100px);
+        }
+        .calcgrid > button {
+          cursor: pointer;
+          font-size: 2rem;
+          border: 1px solid white;
+          outline: none;
+          background-color: aliceblue;
+        }
+        .calcgrid > button:hover {
+          background-color: #f0f0f0;
+        }
+        .spantwo {
+            grid-column: span 2;
+        }
+        .ansout {
+          grid-column: 1 / -1;
+          background-color: rgba(0, 0, 0, 0.31415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          border-radius: 3px;
+          word-wrap: break-word;
+          word-break: break-all;
+        }
+        .ansout .current {
+          color: white;
+          font-size: 1.8rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>This is a website.</h1>
-    <div id="cool"></div>
+    <!-- <h1>This is a website.</h1>
+    <div id="cool"></div> -->
     <!-- <form action="">
         <input type="text" name="name" id="name" placeholder="Enter your name"><br />
         <input type="submit" value="Submit" onclick="submitTest()">
     </form> -->
-    <form>
+    <!-- <form>
         <input type="text" class="form-control" id="num1" placeholder="Number 1">
         <div class="mt-3 mb-3">
         <button class="btn btn-primary" onclick="addition()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
@@ -30,7 +78,33 @@
     </form>
     <div id="ans">
 
+    </div> -->
+  <!-- <p id="demo"></p> -->
+
+    <div class="calcgrid">
+      <div class="ansout">
+        <p class="current" id="output" output></p>
+      </div>
+      <!-- <button class="spantwo" allclear>AC</button> -->
+      <!-- <button delete>DEL</button> -->
+      <button id="÷"onclick="division()">÷</button>
+      <button id="×"onclick="multiplication()">×</button>
+      <button id="+"onclick="addition()">+</button>
+      <button id="-"onclick="subtraction()">-</button>
+      <button id="9" onclick="nine()">9</button>
+      <button id="8" onclick="eight()">8</button>
+      <button id="7"onclick="seven()">7</button>
+      <button id="6"onclick="six()">6</button>
+      <button id="5"onclick="five()">5</button>
+      <button id="4"onclick="four()">4</button>
+      <button id="3"onclick="three()">3</button>
+      <button id="2"onclick="two()">2</button>
+      <button id="1"onclick="one()">1</button>
+      <button id="0"onclick="zero()">0</button>
+      <!-- <button number>.</button> -->
+      <button class="spantwo" onclick="equal()">=</button>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 <script src="script.js"></script>

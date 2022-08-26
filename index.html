@@ -86,25 +86,27 @@
         <p class="current" id="output" output></p>
       </div>
       <!-- <button class="spantwo" allclear>AC</button> -->
-      <!-- <button delete>DEL</button> -->
-      <button id="÷"onclick="division()">÷</button>
-      <button id="×"onclick="multiplication()">×</button>
-      <button id="+"onclick="addition()">+</button>
-      <button id="-"onclick="subtraction()">-</button>
-      <button id="9" onclick="nine()">9</button>
-      <button id="8" onclick="eight()">8</button>
-      <button id="7"onclick="seven()">7</button>
-      <button id="6"onclick="six()">6</button>
-      <button id="5"onclick="five()">5</button>
-      <button id="4"onclick="four()">4</button>
-      <button id="3"onclick="three()">3</button>
-      <button id="2"onclick="two()">2</button>
-      <button id="1"onclick="one()">1</button>
-      <button id="0"onclick="zero()">0</button>
+      <button id="clear" value="clear" onclick="del()">CLR</button>
+      <button id="÷"onclick="number('÷')" value="/">÷</button>
+      <button id="×"onclick="number('×')" value="*">×</button>
+      <button id="+"onclick="number('+')" value="+">+</button>
+      <button id="-"onclick="number('-')" value="-">-</button>
+      <button id="9" onclick="number('9')" value="9">9</button>
+      <button id="8" onclick="number('8')" value="8">8</button>
+      <button id="7"onclick="number('7')" value="7">7</button>
+      <button id="6"onclick="number('6')" value="6">6</button>
+      <button id="5"onclick="number('5')"value="5">5</button>
+      <button id="4"onclick="number('4')" value="4">4</button>
+      <button id="3"onclick="number('3')" value="3">3</button>
+      <button id="2"onclick="number('2')" value="2">2</button>
+      <button id="1"onclick="number('1')" value="1">1</button>
+      <button id="0"onclick="number('0')" value="0">0</button>
       <!-- <button number>.</button> -->
-      <button class="spantwo" onclick="equal()">=</button>
+      <button onclick="equal()">=</button>
     </div>
 
+
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 <script src="script.js"></script>

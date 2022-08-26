@@ -98,88 +98,28 @@
 //     document.getElementById("demo").innerHTML = "Happy Birthday"
 // }
 
-const numButtons = document.querySelectorAll("[number]")
-const operatorButtons = document.querySelectorAll("[operation]")
-const equalsButton = document.querySelector("[equal]")
-const deleteButton = document.querySelector("[delete]")
-const allclearButton = document.querySelector("[allclear]")
-const preButton = document.querySelector("[previous]")
-const currentButton = document.querySelector("[current]")
-
 nums=[]
+function number(id){
+  num=document.getElementById(id).value
+  // console.log(num)
+  console.log(id)
+  nums.push(num)
+  document.getElementById("output").innerHTML = (nums.join(""))
+}
 
-function nine(){
-    num=document.getElementById("output").value='9'
-    nums.push(num)
-    document.getElementById("output").innerHTML = (nums)
+function del(){
+  nums=[]
+  document.getElementById('output').innerHTML = (nums)
+  console.log('clear done...')
 }
-function eight(){    
-    num=document.getElementById("output").value='8'
-    nums.push(num)
-    document.getElementById("output").innerHTML = (nums)
-}
-function seven(){
-    num=document.getElementById("output").value='7'
-    nums.push(num)
-    document.getElementById("output").innerHTML = (nums)
-}
-function six(){
-    num=document.getElementById("output").value='6'
-    nums.push(num)
-    document.getElementById("output").innerHTML = (nums)
-}
-function five(){
-    num=document.getElementById("output").value='5'
-    nums.push(num)
-    document.getElementById("output").innerHTML = (nums)
-}
-function four(){
-    num=document.getElementById("output").value='4'
-    nums.push(num)
-    document.getElementById("output").innerHTML = (nums)
-}
-function three(){
-    num=document.getElementById("output").value='3'
-    nums.push(num)
-    document.getElementById("output").innerHTML = (nums)
-}
-function two(){
-    num=document.getElementById("output").value='2'
-    nums.push(num)
-    document.getElementById("output").innerHTML = (nums)
-}
-function one(){
-    num=document.getElementById("output").value='1'
-    nums.push(num)
-    document.getElementById("output").innerHTML = (nums)
-}
-function zero(){
-    num=document.getElementById("output").value='0'
-    nums.push(num)
-    document.getElementById("output").innerHTML = (nums)
-}
-function division(){
-    num=document.getElementById("output").value='/'
-    nums.push(num)
-    document.getElementById("output").innerHTML = (nums)    
-}
-function multiplication(){
-    num=document.getElementById("output").value='*'
-    nums.push(num)
-    document.getElementById("output").innerHTML = (nums)    
-}
-function addition(){
-    num=document.getElementById("output").value='+'
-    nums.push(num)
-    document.getElementById("output").innerHTML = (nums)        
-}
-function subtraction(){
-    num=document.getElementById("output").value='-'
-    nums.push(num)
-    document.getElementById("output").innerHTML = (nums)    
-}
-function equal(){   
-    output=parseFloat(nums)
-    nums.slice(0,nums.length)
-    console.log(output)
+
+function parse(str) {
+    return Function(`'use strict'; return (${str})`)()
+  }
+  
+  function equal(){ 
+      nums=nums.join("")  
+      output = parse(nums);
+    //   output=parseInt(nums)
+      document.getElementById('output').innerHTML = (output)
 }
